@@ -112,15 +112,7 @@ class MyConfigFlow(ConfigFlow, domain=DOMAIN):
 
 ### Note for OAuth2-Based Config Flows
 
-For integrations that utilize OAuth2 and extend config_entry_oauth2_flow.AbstractOAuth2FlowHandler instead of ConfigFlow, it is not necessary to implement discovery-related steps such as async_step_zeroconf or async_step_discovery_confirm. The AbstractOAuth2FlowHandler base class includes built-in support for Home Assistant's discovery mechanisms and will automatically initiate the configuration flow when a compatible device or service is detected. Developers need only declare the relevant discovery identifiers in manifest.json and implement the async_oauth_create_entry method to complete the configuration.
-
-Certainly! Here's a revised version that refers more generally to Home Assistant's discovery mechanisms:
-
-
-### Note for OAuth2-Based Config Flows
-
 For integrations that utilize OAuth2 and extend `config_entry_oauth2_flow.AbstractOAuth2FlowHandler` instead of `ConfigFlow`, it is not necessary to implement discovery-related steps such as `async_step_zeroconf` or `async_step_discovery_confirm`. The `AbstractOAuth2FlowHandler` base class includes built-in support for Home Assistant's discovery mechanisms and will automatically initiate the configuration flow when a compatible device or service is detected. Developers need only declare the relevant discovery identifiers in `manifest.json` and implement the `async_oauth_create_entry` method to complete the configuration.
-
 
 ## Additional resources
 
